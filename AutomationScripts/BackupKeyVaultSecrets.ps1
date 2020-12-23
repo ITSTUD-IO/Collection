@@ -1,7 +1,7 @@
-$subscriptionId = Get-AzureAutomationVariable -Name SubscriptionId
-$storageConnectionString = Get-AzureAutomationVariable -Name BackupStorageConnectionString
-$keyVaultName = Get-AzureAutomationVariable -Name KeyVaultName
-$fileShareName = Get-AzureAutomationVariable -Name FileShareName
+$subscriptionId = Get-AzureAutomationVariable -Name subscription_id
+$storageConnectionString = Get-AzureAutomationVariable -Name backup_storage_connection_string
+$keyVaultName = Get-AzureAutomationVariable -Name key_vault_name
+$fileShareName = Get-AzureAutomationVariable -Name file_share_name
 $timestamp = Get-Date
 $directoryname = "$($timestamp.Year)$($timestamp.Month)$($timestamp.Day)-$($timestamp.Hour)$($timestamp.Minute)$($timestamp.Second)"
 az account set --subscription $subscriptionId
